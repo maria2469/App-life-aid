@@ -4,35 +4,35 @@
     "slug": "life-aid",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/icon.jpg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
+    "splash": {
+      "image": "./assets/images/icon.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "CAMERA"
+      ],
+      "package": "com.marianoor_28.lifeaid"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.jpg"
     },
     "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
+      "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
@@ -40,7 +40,12 @@
     "extra": {
       "eas": {
         "projectId": "4134d946-4fad-48cf-a9e5-2371635cd14c"
-      }
-    }
+      },
+      "GROQ_API_KEY": "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",
+      "GROQ_MODEL_NAME": "llama-3.2-90b-vision-preview",
+      "GROQ_API_ENDPOINT": "https://api.groq.com/openai/v1/chat/completions",
+      "GROQ_API_SECRET_KEY": "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"
+    },
+    "entryPoint": "./index.tsx"
   }
 }
